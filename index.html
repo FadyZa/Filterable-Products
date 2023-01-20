@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Filterable Gallery</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <input type="search" id="search-input" placeholder="search by category..">
+            <button id="search-btn">Search</button>
+        </header>
+
+        <nav>
+            <button class="cats active" onclick="filter('all')">all</button>
+            <button class="cats" onclick="filter('mobiles')">mobile</button>
+            <button class="cats" onclick="filter('watchs')">watchs</button>
+            <button class="cats" onclick="filter('laptops')">laptops</button>
+        </nav>
+
+        <section>
+            <!-- <div class="card">
+                <figure>
+                    <img src="imgs/iPhone 12 Pro Max Png Transparent.png">
+                    <h2>iphone 12 pro max</h2>
+                    <figcaption>price: 1000$</figcaption>
+                </figure>
+                <button>add to cart</button>
+            </div> -->
+
+        </section>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

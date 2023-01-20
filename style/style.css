@@ -1,0 +1,144 @@
+:root {
+    --main-color: #212737;
+    --sec-color: #da9c16;
+    --transition: 0.35s ease-in;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: #f4f5de;
+}
+
+.container {
+    padding: 5px;
+}
+
+header {
+    justify-content: center;
+}
+
+header,
+nav {
+    margin: 25px auto;
+    display: flex;
+    gap: 15px;
+}
+
+header input {
+    padding: 6px 15px;
+    border-bottom: 2px solid var(--main-color);
+    background-color: transparent;
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+header input:focus {
+    border-bottom-color: var(--sec-color);
+}
+
+nav {
+    /* From https://css.glass */
+    background: rgba(129, 115, 41, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(129, 115, 41, 0.23);
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 8px 5px;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+header button,
+nav button {
+    padding: 7px 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--sec-color);
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+section .card {
+    background-color: var(--main-color);
+    border-radius: 11px;
+    transition: var(--transition);
+    display: grid;
+}
+
+section .card:hover {
+    background-color: #262707;
+}
+
+section .card h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding: 4px;
+    margin-top: 15px;
+    color: var(--sec-color);
+}
+
+section .card figure img {
+    max-width: 45%;
+    height: 130px;
+    display: block;
+    margin: 5px auto;
+    transition: var(--transition);
+}
+
+.card:hover figure img {
+    transform: rotateZ(-14deg) scale(1.2) translateY(-8px);
+}
+
+section .card figcaption {
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+
+section .card button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-transform: capitalize;
+    background-color: var(--sec-color);
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.active {
+    background-color: var(--sec-color);
+}
+
+.hide {
+    display: none !important;
+}
